@@ -1,21 +1,21 @@
 # bdo-assignment
 
-## 🚀 Overview
+## Overview
 
 This is a Google Cloud Run service for processing financial statement PDFs and evaluating classification accuracy via two HTTP endpoints:
 
-### 🔹 `/classification`
+### `/classification`
 - Extracts text from each page of a PDF.
 - Classifies pages into types like **Balance Sheet**, **Income Statement**, etc.
 - Saves classification results as CSV in a **Google Cloud Storage** bucket.
 
-### 🔹 `/evaluation-metrics`
+### `/evaluation-metrics`
 - Compares classification results with a ground truth CSV.
 - Returns evaluation metrics like **accuracy**, **precision**, **recall**, and **F1 score**.
 
 ---
 
-## 🛠 Built With
+## Built With
 
 - **Google Cloud Vision API** – for OCR-based text extraction from PDFs
 - **pdfplumber** – for PDF page parsing and table/text extraction
@@ -41,10 +41,10 @@ Before deploying or running locally, make sure the following are set up:
 
 ---
 
-## 📁 Project Structure
+## Folder Structure
 
 ```bash
 ├── main.py               # Application entry point
 ├── requirements.txt      # Python dependencies
-├── auth.json             # GCP service account key (add your own creds)
+├── auth.json             # GCP service account key (add your creds)
 ├── README.md             # You're here :)
