@@ -6,13 +6,13 @@ import csv
 import io
 import tempfile
 import logging
+import fitz
+import pdfplumber
+from concurrent.futures import ThreadPoolExecutor
 from typing import Dict, List, Any
 from google.cloud import vision_v1, storage
 from google.cloud.vision_v1 import types
-import fitz
-import pdfplumber
 from PIL import Image, ImageEnhance
-from concurrent.futures import ThreadPoolExecutor
 from fuzzywuzzy import fuzz
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
